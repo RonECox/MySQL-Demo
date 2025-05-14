@@ -1,0 +1,19 @@
+{
+  "name": "MySQL with Docker-in-Docker",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "runArgs": ["--privileged"],
+  "postCreateCommand": "docker-compose up -d",
+  "forwardPorts": [3306],
+  "portsAttributes": {
+    "3306": {
+      "label": "MySQL",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "vscode"
+}
