@@ -2,6 +2,8 @@
 
 This project demonstrates how to run a MySQL server inside a GitHub Codespace using Docker-in-Docker (DinD), and how to automatically set up a database, create a table, and import data from a CSV file.
 
+## Watch the Video Tutorial
+[![Watch the Video Tutorial](https://img.youtube.com/vi/jcj-b7tqCKY/0.jpg)](https://youtu.be/jcj-b7tqCKY)
 ---
 
 ## 🧰 Features
