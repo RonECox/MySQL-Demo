@@ -12,7 +12,8 @@ LOAD DATA LOCAL INFILE '/workspaces/MySQL-Demo/mydrivers.csv'
 INTO TABLE drivers
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
+IGNORE 1 ROWS
+(channel, version, revision, binary_type, platform, url, http_status);
 EOF
 
 echo "Import complete!"
