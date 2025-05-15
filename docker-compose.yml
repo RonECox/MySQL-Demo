@@ -7,13 +7,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydb
+      MYSQL_DATABASE: MyDriversDB
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
+    command: --local-infile=1
     volumes:
-      - mysql-data:/var/lib/mysql
-
-volumes:
-  mysql-data:
+      - ./db_setup.sql:/docker-entrypoint-initdb.d/db_setup.sql
+      - ./mydrivers.csv:/mydrivers.csv
